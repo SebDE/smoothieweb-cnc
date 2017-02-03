@@ -14,7 +14,7 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
     .factory('cmdService', function($http) {
         var config =  { headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'} };
         //var url = "http://cxy.bit.local/";
-        var url = "http://lathe.bit.local/";
+        var url = "http://192.168.0.34/";
         return {
             cmd_silent: function(cmd,callback) {
                 $http.post(url+'command_silent',cmd+'\n',config).success(callback);
