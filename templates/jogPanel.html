@@ -1,0 +1,51 @@
+<div class="card">
+    <h3 class="card-header">JogPanel</h3>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-12 text-md-center">
+                <div class="col-md-3">
+                    <button ng-click="setDistance('0.1')" class="btn btn-outline-primary">0.1</button>
+                </div>
+                <div class="col-md-3">
+                    <button ng-click="setDistance('1.0')" class="btn btn-outline-primary">1.0</button>
+                </div>
+                <div class="col-md-3">
+                    <button ng-click="setDistance('10.0')" class="btn btn-outline-primary">10.0</button>
+                </div>
+                <div class="col-md-3">
+                    <button ng-click="setDistance('100.0')" class="btn btn-outline-primary">100.0</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6"><button class="btn btn-lg btn-jog btn-primary btn-block">D: {{$root.distance}}</button></div>
+            <div class="col-md-3"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"><button ng-click="jogYp()" class="btn btn-lg btn-jog btn-outline-primary btn-block">Y+</button></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"><button ng-click="jogZp()" class="btn btn-lg btn-jog btn-outline-primary btn-block">Z+</button></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"><button ng-click="jogXm()" class="btn btn-lg btn-jog btn-outline-primary btn-block">X-</button></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"><button ng-click="jogXp()" class="btn btn-lg btn-jog btn-outline-primary btn-block">X+</button></div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"><button ng-click="jogYm()" class="btn btn-lg btn-jog btn-outline-primary btn-block">Y-</button></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"><button ng-click="jogZm()" class="btn btn-lg btn-jog btn-outline-primary btn-block">Z-</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 text-md-center"><button ng-click="motorOn()" class="btn btn-outline-primary btn-block">Motors On</button></div>
+            <div class="col-md-6 text-md-center"><button ng-click="motorOff()" class="btn btn-outline-primary btn-block">Motors Off</button></div>
+        </div>
+    </div>
+</div>

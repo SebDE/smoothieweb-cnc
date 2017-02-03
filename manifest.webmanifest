@@ -1,0 +1,7 @@
+{
+  "short_name": "SmoothieWeb",
+  "name": "SmoothieWeb V0.3",
+  "start_url": "http://machines.bit.local/lathe/index.html",
+  "display": "fullscreen",
+  "orientation": "landscape"
+}

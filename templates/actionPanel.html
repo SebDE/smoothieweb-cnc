@@ -1,0 +1,41 @@
+<div class="card">
+    <h3 class="card-header">Control Gadgets</h3>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-6"><button ng-click="spindleOn()" class="btn btn-outline-primary btn-block">Spindle On</button></div>
+            <div class="col-md-6"><button ng-click="spindleOff()" class="btn btn-outline-primary btn-block">Spindle Off</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6"><button ng-click="PSUOn()" class="btn btn-outline-primary btn-block">VFD On</button></div>
+            <div class="col-md-6"><button ng-click="PSUOff()" class="btn btn-outline-primary btn-block">VFD Off</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4"><button ng-click="airOn()" class="btn btn-outline-primary btn-block">Air On</button></div>
+            <div class="col-md-4"><button ng-click="mistOn()" class="btn btn-outline-primary btn-block">Mist On</button></div>
+            <div class="col-md-4"><button ng-click="coolOff()" class="btn btn-outline-primary btn-block">Off</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <button ng-click="resume()" class="btn btn-outline-primary btn-block">Resume</button>
+            </div>
+            <div class="col-md-6">
+                <button ng-click="halt()" class="btn btn-outline-primary btn-block">Pause</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon">CMD</span>
+                    <input type="text" ng-enter="sendCMD()" id="cmdInput" class="form-control" placeholder="M503">
+                    <span class="input-group-btn">
+                        <button type="submit" ng-click="sendCMD()" class="btn btn-secondary" type="button"><i class="fa fa-terminal" aria-hidden="true"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

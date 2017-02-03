@@ -1,0 +1,38 @@
+<div class="card">
+    <h3 class="card-header">WCS-Panel</h3>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-4"><button ng-click="zeroX()" class="btn btn-outline-primary btn-block">X = 0</button></div>
+            <div class="col-md-4"><button ng-click="zeroY()" class="btn btn-outline-primary btn-block">Y = 0</button></div>
+            <div class="col-md-4"><button ng-click="zeroZ()" class="btn btn-outline-primary btn-block">Z = 0</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6"><button ng-click="zeroXY()" class="btn btn-outline-primary btn-block">X/Y = 0</button></div>
+            <div class="col-md-6"><button ng-click="zeroZ()" class="btn btn-outline-primary btn-block">Z = 0</button></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-md-center">
+                <div class="input-group">
+                    <div class="input-group-addon">X</div>
+                    <input ng-value="xpos" type="text" class="form-control" readonly="true">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">Y</div>
+                    <input ng-value="ypos" type="text" class="form-control" readonly="true">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">Z</div>
+                    <input ng-value="zpos" type="text" class="form-control" readonly="true">
+                </div>
+            </div>
+        </div>
+        <div class="mt-1"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <button ng-click="getPos()" class="btn btn-outline-primary btn-block"><i class="fa fa-retweet" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

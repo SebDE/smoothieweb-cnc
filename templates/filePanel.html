@@ -1,0 +1,53 @@
+<div class="card">
+    <h3 class="card-header">Files</h3>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" ng-click="refreshFiles()" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#fileModal">
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+                <span>Selected File: <b class="animate-if" ng-if="selectedFileIndex>=0">{{files[selectedFileIndex]}}</b></span>
+            </div>
+            <div class="col-md-4">
+                <div ng-if="selectedFileIndex>=0" class="row animate-if">
+                    <div class="col-md-6">
+                        <button type="button" ng-click="playFile(selectedFileIndex)" class="btn btn-outline-primary btn-block">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" ng-click="unselectFile()" class="btn btn-outline-primary btn-block">
+                            <i class="fa fa-ban" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="fileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="fileModalLabel">Files</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" ng-repeat="file in files track by $index">
+                    <li class="list-group-item list-group-item-action" ng-click="selectFile($index)" data-dismiss="modal">
+                        {{file}}
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

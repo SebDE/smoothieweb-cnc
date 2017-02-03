@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smoothie-Web Mill-CNC v0.4</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/hotkeys.min.css" rel="stylesheet">
+
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body ng-keypress="handleKeypress($event)">
+
+<!-- Fixed navbar -->
+<div class="pos-f-t">
+    <div class="collapse" id="navbar-header">
+        <div class="container bg-inverse p-1">
+            <h3>Collapsed content</h3>
+            <p>Toggleable via the navbar brand.</p>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-static-top bg-faded">
+        <div class="container">
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-expanded="false" aria-controls="exCollapsingNavbar2" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+                <a class="navbar-brand" href="#">Smoothie-Web Mill-CNC 0.4</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Begin page content -->
+<div class="container" ng-app="smoothieWeb">
+    <div class="mt-1">
+    </div>
+
+    <div class="row row-eq-height">
+        <div class="col-md-4">
+            <div>
+                <jog-panel></jog-panel>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <wcs-panel></wcs-panel>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <action-panel></action-panel>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-1">
+    </div>
+
+    <div class="row row-eq-height">
+        <div class="col-md-5">
+            <div>
+                <file-panel></file-panel>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div>
+                <power-panel></power-panel>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">&copy; 2016 by burck-it.de</span>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="js/angular.min.js"></script>
+<script src="js/hotkeys.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
