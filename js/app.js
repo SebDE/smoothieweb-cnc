@@ -126,7 +126,7 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
                 });
             };
             $scope.jogYm = function() {
-                cmdService.cmd_silent('G91 G0 Y--'+$rootScope.distance+' F1500 G90',function (data,status) {
+                cmdService.cmd_silent('G91 G0 Y-'+$rootScope.distance+' F1500 G90',function (data,status) {
                     console.log(status);
                 });
             }
