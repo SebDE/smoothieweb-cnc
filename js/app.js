@@ -170,6 +170,21 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
                     $scope.ypos = data.match(/[Y][:]\d+[.]\d+/)[0].substring(2);
                 });
             };
+            $scope.homeX = function() {
+                cmdService.cmd('G28 X',function (data,status) {
+                    $scope.getPos();
+                });
+            };
+            $scope.homeY = function() {
+                cmdService.cmd('G60 G4 P500 G61 G92 Y250',function (data,status) {
+                    $scope.getPos();
+                });
+            };
+            $scope.homeZ = function() {
+                cmdService.cmd('G28 Z',function (data,status) {
+                    $scope.getPos();
+                });
+            };
             $scope.zeroX = function() {
                 cmdService.cmd('G92 X0',function (data,status) {
                     $scope.getPos();
