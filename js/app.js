@@ -176,7 +176,7 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
                 });
             };
             $scope.homeY = function() {
-                cmdService.cmd('G60 G4 P500 G61 G92 Y250',function (data,status) {
+                cmdService.cmd('M17 G60 G4 P500 G61 G92 Y0',function (data,status) {
                     $scope.getPos();
                 });
             };
@@ -280,8 +280,16 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
                     $scope.airOn();
                 }
             });
-
-
+            $scope.VacOn = function() {
+                cmdService.cmd_silent('M10',function (data,status) {
+                    console.log(status);
+                });
+            };
+            $scope.VacOff = function() {
+                cmdService.cmd_silent('M11',function (data,status) {
+                    console.log(status);
+                });
+            };
             $scope.spindleOn = function() {
                 cmdService.cmd_silent('M3',function (data,status) {
                     console.log(status);
