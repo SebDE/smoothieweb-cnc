@@ -180,6 +180,13 @@ angular.module("smoothieWeb", ['cfp.hotkeys'])
                     $scope.getPos();
                 });
             };
+
+	    $scope.probeZ = function() {
+		cmdService.cmd('G30 Z31.82 G91 G0 Z5 G90',function (data,status) {
+		    $scope.getPos();
+		});
+
+	    };
             $scope.homeZ = function() {
                 cmdService.cmd('G28 Z',function (data,status) {
                     $scope.getPos();
